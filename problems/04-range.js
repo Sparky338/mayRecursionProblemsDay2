@@ -6,12 +6,30 @@ the start, return an empty array.
 Examples:
 
 range(1, 5); // [1, 2, 3, 4]
+                []
+                [1] connect
+                [1, 2]
+                [1, 2, 3]
+                [1, 2, 3, 4]
 range(3, 4); // [3]
 range(7, 6); // []
 ***********************************************************************/
 
 
-// your code here
+let range = (start, end) => {
+  let array = [];
+
+  if (start === end) {
+    return array;
+  }
+
+  if (start > end) return [];
+
+  array.push(start);
+
+  return array.concat(range(start + 1, end));
+
+}
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
