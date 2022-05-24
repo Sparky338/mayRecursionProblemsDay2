@@ -7,11 +7,11 @@ Examples:
 
 flatten([]); // []
 flatten([1, 2]); // [1, 2]
-flatten([1, [2, [3]]]); // [1, 2, 3]
+flatten([1, [2, [3]]]); // [1, 2, 3]     [2, [3]]     [ [3] ]
 ***********************************************************************/
 
 // your code here
-const flatten = (arr) =>{
+const flatten = (arr) => {
   if (arr.length === 0) return [];
 
   let firstEl = arr[0];
