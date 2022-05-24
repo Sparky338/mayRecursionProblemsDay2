@@ -13,6 +13,13 @@ reverse(""); // ""
 ***********************************************************************/
 
 // your code here
+function reverse(string){
+  if (string.length === 0) return "";
+
+  let firstChar = string[0];
+  let restOfString = string.slice(1);
+  return reverse(restOfString) + firstChar;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
