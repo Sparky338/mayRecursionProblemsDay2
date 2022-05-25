@@ -23,9 +23,13 @@ const subsets = (arr) => {
   if (subArr === undefined) return subArr.push([]);
   if (arr.length === 1) return subArr.push(firstEl);
 
-  if (arr.length === 2) {
-    return 
-  }
+  //look at array indiceies, determine if we want them there or not, go to next index, etc.
+  let currArr = arr.slice(0, 1);
+
+  
+  // if (arr.length === 2) {
+
+  // }
 
 }
 subsets([1]) // [[], [1]]
