@@ -65,8 +65,28 @@ The call above should return the tree below:
 
 const makeTree = (categories, parent) => {
   if (!categories.length) return {};
-  
+
+  let objectTree = {};
+
+  let { id, parent: currParent } = categories[0]
+
+  if (currParent === parent) {
+    objectTree[id] = makeTree(categories.slice(1), id)
+  }
+
+  if (id === parent) {
+
+  }
+
+  return objectTree;
+
 };
+
+const categories1 = [
+  { id: 'animals', 'parent': null },
+  { id: 'mammals', 'parent': 'animals' }
+];
+const tree1 = makeTree(categories1, null);
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
