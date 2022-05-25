@@ -64,7 +64,8 @@ The call above should return the tree below:
 ***********************************************************************/
 
 const makeTree = (categories, parent) => {
-  // your code here
+  if (!categories.length) return {};
+  
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
